@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thibanglaixe/login_screen/components/login_button.dart';
 
+import 'components/Move_to_Register_Screen.dart';
 import 'components/email_input_field.dart';
 import 'components/forgot_password.dart';
 import 'components/password_input_field.dart';
@@ -48,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(
                         height: 50.0,
                       ),
-                      move_to_register_screen(),
+                      const move_to_register_screen(),
                     ],
                   ),
                 ),
@@ -57,37 +58,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class move_to_register_screen extends StatelessWidget {
-  const move_to_register_screen({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text(
-          "Don't have an account? ",
-          style: TextStyle(
-            fontSize: 15.0,
-          ),
-        ),
-        GestureDetector(
-          onTap: () {},
-          child: const Text(
-            "Register!",
-            style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 17.0,
-            ),
-          ),
-        )
-      ],
     );
   }
 }

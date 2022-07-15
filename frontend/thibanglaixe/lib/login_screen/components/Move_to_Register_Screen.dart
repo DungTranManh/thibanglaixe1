@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thibanglaixe/register_screen/register.dart';
 
 class move_to_register_screen extends StatelessWidget {
   const move_to_register_screen({
@@ -17,7 +18,12 @@ class move_to_register_screen extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const RegisterScreen()));
+          },
           child: const Text(
             "Register!",
             style: TextStyle(
