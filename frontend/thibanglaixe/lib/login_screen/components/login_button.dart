@@ -11,7 +11,9 @@ class login_button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        print("Login Button Clicked");
+      },
       child: Container(
         height: 45.0,
         width: size.width - 16.0,

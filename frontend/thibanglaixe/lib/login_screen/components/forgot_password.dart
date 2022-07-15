@@ -14,11 +14,26 @@ class forgot_password extends StatelessWidget {
       padding: EdgeInsets.only(
         left: size.width / 2 + 10.0,
       ),
-      child: const Text(
-        "Forgot Password?",
-        style: TextStyle(
-          fontWeight: FontWeight.w600,
-        ),
+      child: Row(
+        children: [
+          const Text(
+            "Forgot ",
+            style: TextStyle(
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              print("Forgot password");
+            },
+            child: const Text(
+              "Password?",
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
