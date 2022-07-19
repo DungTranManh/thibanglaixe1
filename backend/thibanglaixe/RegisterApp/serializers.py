@@ -8,3 +8,4 @@ class RegisterSerializer(serializers.Serializer):
     email = serializers.EmailField(max_length=255)
     password = serializers.CharField()
     firstname = serializers.CharField(max_length=255)
+    lastname = serializers.CharField(max_length=255)

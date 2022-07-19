@@ -14,11 +14,12 @@ class RegisterView(APIView):
         my_data = RegisterSerializer(data=request.data)
         if not my_data.is_valid():
             return Response(status=status.HTTP_400_BAD_REQUEST)
-        username = my_data.data['username']
-        email = my_data.data['email']
-        password = my_data.data['password']
-        firstname = my_data.data['firstname']
+        username_get = my_data.data['username']
+        email_get = my_data.data['email']
+        password_get = my_data.data['password']
+        firstname_get = my_data.data['firstname']
+        lastname_get = my_data.data['lastname']
         new_user = User.objects.create_user(
-            username=username, first_name=firstname, email=email, password=password)
+            username=username_get, first_name=firstname_get, email=email_get, password=password_get, last_name=lastname_get)
         new_user.save()
         return Response(data="oke", status=status.HTTP_200_OK)
