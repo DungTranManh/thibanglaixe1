@@ -17,6 +17,8 @@ class RegisterView(APIView):
         username = my_data.data['username']
         email = my_data.data['email']
         password = my_data.data['password']
-        new_user = User.objects.create_user(username, email, password)
+        firstname = my_data.data['firstname']
+        new_user = User.objects.create_user(
+            username=username, first_name=firstname, email=email, password=password)
         new_user.save()
         return Response(data="oke", status=status.HTTP_200_OK)
