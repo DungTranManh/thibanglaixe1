@@ -12,7 +12,7 @@ class register_button extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print("Register button clicked");
+        print("abc");
       },
       child: Container(
         height: 40.0,

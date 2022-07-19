@@ -8,6 +8,7 @@ class password_input_field extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const TextField(
+      obscureText: true,
       decoration: InputDecoration(
         labelText: "Password",
         prefixIcon: Icon(Icons.lock),
