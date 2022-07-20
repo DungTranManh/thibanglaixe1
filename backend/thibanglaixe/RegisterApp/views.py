@@ -13,7 +13,7 @@ class RegisterView(APIView):
     def post(self, request):
         my_data = RegisterSerializer(data=request.data)
         if not my_data.is_valid():
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+            return Response(data="not oke", status=status.HTTP_400_BAD_REQUEST)
         username_get = my_data.data['username']
         email_get = my_data.data['email']
         password_get = my_data.data['password']
