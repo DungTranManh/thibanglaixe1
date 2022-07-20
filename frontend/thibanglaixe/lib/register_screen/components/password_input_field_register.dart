@@ -18,6 +18,7 @@ class password_input_field_register extends StatelessWidget {
         right: 50.0,
       ),
       child: TextField(
+        obscureText: true,
         controller: _passwordController,
         decoration: const InputDecoration(
           labelText: "Password:",
