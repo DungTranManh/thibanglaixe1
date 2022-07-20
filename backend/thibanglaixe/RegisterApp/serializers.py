@@ -1,5 +1,3 @@
-from unittest.util import _MAX_LENGTH
-from django.forms import PasswordInput
 from rest_framework import serializers
 
 
