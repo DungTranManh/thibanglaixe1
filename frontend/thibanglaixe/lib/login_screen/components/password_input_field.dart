@@ -3,25 +3,30 @@ import 'package:flutter/material.dart';
 class password_input_field extends StatelessWidget {
   const password_input_field({
     Key? key,
-  }) : super(key: key);
+    required TextEditingController passwordlogin,
+  })  : _passwordlogin = passwordlogin,
+        super(key: key);
+
+  final TextEditingController _passwordlogin;
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
+    return TextField(
+      controller: _passwordlogin,
       obscureText: true,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: "Password",
         prefixIcon: Icon(Icons.lock),
         hintText: "Enter password...",
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(
+            const Radius.circular(
               20.0,
             ),
           ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.all(
+          borderRadius: const BorderRadius.all(
             Radius.circular(
               20.0,
             ),
